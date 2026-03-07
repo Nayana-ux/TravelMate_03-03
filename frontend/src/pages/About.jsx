@@ -5,6 +5,7 @@ function About() {
   return (
     <>
       <Navbar />
+       <div className="about-bg"></div>
       <div className="container" style={{ padding: "40px 20px", color: "#333" }}>
         <h2>About This App</h2>
         <p>

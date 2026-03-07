@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    
   }
   
   /* Navbar */
@@ -8,7 +9,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.35);
+      background: rgba(15, 42, 61, 0.65);
+     backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +40,7 @@ body {
   }
   
   .nav-item:hover {
-    background-color:#57564F;
+    background-color:#63082df3;
     transform: translateY(-2px);
   }
   
@@ -47,6 +49,34 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
+  }
+
+  .logout-btn{
+  background:#da4b0e;
+  border:none;
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.logout-btn:hover{
+  background:#b83c0a;
+}
+
+  .wishlist-remove-btn {
+    background-color: #286aa7; /* Green */
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  
+  .wishlist-remove-btn:hover {
+    background-color: #218838; /* Darker green on hover */
   }
   
   .home-bg {
@@ -64,10 +94,38 @@ body {
   /* Dark layer to make text readable */
   .home-bg::before {
     content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top:0;
+  margin-top: -80px;
+  left:0;
+  width:100%;
+  height:80px;
+  background:#3A5666;
+
+    
   }
+  .about-bg{
+     content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background:#3A5666;
+  
+}
+
+.login-bg{
+
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 77px;
+  background:#3A5666;
+
+}
   
   .home-overlay {
     position: relative;
@@ -108,6 +166,7 @@ body {
     padding: 40px;
     max-width: 1100px;
     margin: auto;
+     margin-top: 40px;
   }
   
   /* Card */
@@ -115,7 +174,7 @@ body {
     background: white;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
   
   .card select, .card button {
@@ -131,6 +190,8 @@ body {
     border-radius: 6px;
     margin-top: 20px;
   }
+
+  
   
   /* Grid */
   .grid {
@@ -144,7 +205,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
   /* HERO TEXT ANIMATION */
 @keyframes fadeInUp {
@@ -191,5 +252,4 @@ body {
 .grid .card:nth-child(4) { animation-delay: 0.4s; }
 .grid .card:nth-child(5) { animation-delay: 0.5s; }
 .grid .card:nth-child(6) { animation-delay: 0.6s; }
-
 

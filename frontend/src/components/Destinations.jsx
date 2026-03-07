@@ -1,7 +1,28 @@
+import { useState } from "react";
+import API from "../api/api";
 import Navbar from "../components/Navbar";
 import DestinationList from "../components/DestinationList";
 
 function Destinations() {
+
+  const [result, setResult] = useState(null);
+
+  const handleSubmit = async () => {
+    console.log("Button clicked");
+    try {
+      const response = await API.post("/recommend", {
+        climate: "Cold",
+        budget: 8000,
+        duration: 3,
+        activity: "Trekking"
+      });
+
+      setResult(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -44,7 +65,19 @@ function Destinations() {
             <option>Adventure</option>
           </select>
 
-          <button>Get Recommendations</button>
+          <button onClick={handleSubmit}>
+            Get Recommendations
+          </button>
+
+          {/* SHOW RESULT */}
+          {result && (
+            <div style={{ marginTop: "20px" }}>
+              <h3>{result.bestDestination.name}</h3>
+              <p>{result.bestDestination.description}</p>
+              <p>{result.explanation}</p>
+            </div>
+          )}
+
         </div>
 
       </div>
