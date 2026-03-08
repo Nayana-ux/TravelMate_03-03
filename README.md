@@ -261,3 +261,47 @@ TravelMate:
 * Identifies bottlenecks
 * Explains how to improve trip quality
 * Provides decision intelligence
+
+
+
+## 🚀 Live Demo
+https://travel-mate-03-03.vercel.app
+
+---
+
+## 📌 Features
+- User Sign Up and Login
+- Personalized travel destination recommendations
+- Wishlist functionality
+- Responsive user interface
+- Modern UI with glassmorphism design
+
+---
+
+## 🛠️ Technologies Used
+- React.js
+- JavaScript
+- CSS
+- Node.js
+- GitHub
+- Vercel (Deployment)
+
+---
+
+## ⚙️ CI/CD Pipeline
+This project uses a **CI/CD pipeline** for automated build and deployment.
+
+Workflow:
+
+Developer pushes code → GitHub Repository → GitHub Actions CI → Vercel Deployment → Live Website
+
+Whenever new code is pushed to GitHub, the application is automatically built and deployed.
+
+---
+
+
+---
+
+## 👩‍💻 Author
+Nayana B
+Khushi H N
