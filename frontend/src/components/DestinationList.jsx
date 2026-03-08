@@ -1,7 +1,7 @@
 import DestinationCard from "./DestinationCard";
 
 function DestinationList({ results }) {
-  if (!results.length) return <p>No recommendations yet.</p>;
+  if (!results.length) return <p>hurrrayyyyy....! No recommendations yet.</p>;
 
   return (
     <div className="results-container">
